@@ -1,26 +1,167 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fzf-5k-9mw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hanoi View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HanoiViewController" customModule="HanoiTower" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8I-LW-EKo" customClass="HanoiView" customModule="HanoiTower" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.81176470588235294" green="0.81568627450980391" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81176470588235294" green="0.81568627450980391" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="l8I-LW-EKo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="G7l-3V-J0L"/>
+                            <constraint firstAttribute="bottom" secondItem="l8I-LW-EKo" secondAttribute="bottom" constant="20" symbolic="YES" id="oC9-iP-ZUx"/>
+                            <constraint firstItem="l8I-LW-EKo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="rC7-pm-qdd"/>
+                            <constraint firstItem="l8I-LW-EKo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yCN-13-9pw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hanoiView" destination="l8I-LW-EKo" id="n39-oV-wsR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Start View Controller-->
+        <scene sceneID="dNp-Wa-yeb">
+            <objects>
+                <viewController storyboardIdentifier="StartViewController" id="Fzf-5k-9mw" customClass="StartViewController" customModule="HanoiTower" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bVg-W1-32j"/>
+                        <viewControllerLayoutGuide type="bottom" id="A0o-C5-Grw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fyt-oJ-L3o">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose amount of disks for  Hanoi Tower" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTR-zs-IIi">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vB-rL-hY3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="diskButtonPressed:" destination="Fzf-5k-9mw" eventType="touchUpInside" id="0OH-1S-MhD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjb-r5-yoM">
+                                <color key="backgroundColor" red="0.81176470588235294" green="0.81568627450980391" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="diskButtonPressed:" destination="Fzf-5k-9mw" eventType="touchUpInside" id="4dL-v0-vQK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZ9-rr-kZk">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="diskButtonPressed:" destination="Fzf-5k-9mw" eventType="touchUpInside" id="zuU-x3-6Rc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJk-Bu-foB">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="diskButtonPressed:" destination="Fzf-5k-9mw" eventType="touchUpInside" id="Zlh-MU-0wK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFh-zE-qJu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="7">
+                                    <color key="titleColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="diskButtonPressed:" destination="Fzf-5k-9mw" eventType="touchUpInside" id="6nk-kY-3D2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfc-Jg-0q0">
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.58823529411764708" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="aay-UX-UDG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.92156862745098034" green="0.88927790422611108" blue="0.90011588898055617" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHanoiTower" id="0dJ-qg-sTp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0h-RA-LUa">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="diskButtonPressed:" destination="Fzf-5k-9mw" eventType="touchUpInside" id="Cp6-3k-Nxn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81176470588235294" green="0.81568627450980391" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iJk-Bu-foB" firstAttribute="top" secondItem="6vB-rL-hY3" secondAttribute="top" id="069-gF-iOj"/>
+                            <constraint firstItem="nZ9-rr-kZk" firstAttribute="width" secondItem="6vB-rL-hY3" secondAttribute="width" id="2SA-cr-GdD"/>
+                            <constraint firstItem="6vB-rL-hY3" firstAttribute="leading" secondItem="Fyt-oJ-L3o" secondAttribute="leadingMargin" id="8B4-Ut-3hU"/>
+                            <constraint firstItem="hTR-zs-IIi" firstAttribute="top" secondItem="bVg-W1-32j" secondAttribute="bottom" constant="45" id="90a-vV-BSp"/>
+                            <constraint firstItem="iJk-Bu-foB" firstAttribute="leading" secondItem="bjb-r5-yoM" secondAttribute="trailing" constant="40" id="Ala-IP-SBC"/>
+                            <constraint firstItem="bjb-r5-yoM" firstAttribute="leading" secondItem="z0h-RA-LUa" secondAttribute="trailing" constant="40" id="Idv-Fk-VUZ"/>
+                            <constraint firstItem="Zfc-Jg-0q0" firstAttribute="centerX" secondItem="Fyt-oJ-L3o" secondAttribute="centerX" id="KHM-lu-uRc"/>
+                            <constraint firstItem="A0o-C5-Grw" firstAttribute="top" secondItem="Zfc-Jg-0q0" secondAttribute="bottom" constant="64" id="NVr-4x-a6L"/>
+                            <constraint firstItem="TFh-zE-qJu" firstAttribute="leading" secondItem="nZ9-rr-kZk" secondAttribute="trailing" constant="40" id="UjC-MM-ogd"/>
+                            <constraint firstItem="z0h-RA-LUa" firstAttribute="leading" secondItem="6vB-rL-hY3" secondAttribute="trailing" constant="40" id="XgF-MK-1ax"/>
+                            <constraint firstItem="bjb-r5-yoM" firstAttribute="width" secondItem="6vB-rL-hY3" secondAttribute="width" id="azy-aX-ji6"/>
+                            <constraint firstItem="z0h-RA-LUa" firstAttribute="top" secondItem="6vB-rL-hY3" secondAttribute="top" id="dE2-z8-l7n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TFh-zE-qJu" secondAttribute="trailing" constant="20" id="gBj-Sx-YPA"/>
+                            <constraint firstItem="z0h-RA-LUa" firstAttribute="width" secondItem="6vB-rL-hY3" secondAttribute="width" id="ljB-wZ-RLW"/>
+                            <constraint firstItem="bjb-r5-yoM" firstAttribute="top" secondItem="6vB-rL-hY3" secondAttribute="top" id="oys-nj-uFj"/>
+                            <constraint firstItem="hTR-zs-IIi" firstAttribute="centerX" secondItem="Fyt-oJ-L3o" secondAttribute="centerX" id="qMt-3C-X53"/>
+                            <constraint firstItem="TFh-zE-qJu" firstAttribute="width" secondItem="6vB-rL-hY3" secondAttribute="width" id="rvM-3p-gS6"/>
+                            <constraint firstItem="nZ9-rr-kZk" firstAttribute="leading" secondItem="iJk-Bu-foB" secondAttribute="trailing" constant="40" id="sQS-GM-evQ"/>
+                            <constraint firstItem="nZ9-rr-kZk" firstAttribute="top" secondItem="6vB-rL-hY3" secondAttribute="top" id="u0E-cL-u5j"/>
+                            <constraint firstItem="6vB-rL-hY3" firstAttribute="top" secondItem="bVg-W1-32j" secondAttribute="bottom" constant="164" id="vkL-Pb-bgk"/>
+                            <constraint firstItem="TFh-zE-qJu" firstAttribute="top" secondItem="6vB-rL-hY3" secondAttribute="top" id="xWg-dn-T38"/>
+                            <constraint firstItem="iJk-Bu-foB" firstAttribute="width" secondItem="6vB-rL-hY3" secondAttribute="width" id="zGN-vK-Zma"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fiveButton" destination="iJk-Bu-foB" id="ho1-Pk-gAd"/>
+                        <outlet property="fourButton" destination="bjb-r5-yoM" id="i30-9E-VM8"/>
+                        <outlet property="sevenButton" destination="TFh-zE-qJu" id="sQX-ly-ci2"/>
+                        <outlet property="sixButton" destination="nZ9-rr-kZk" id="Br3-DK-1xy"/>
+                        <outlet property="threeButton" destination="z0h-RA-LUa" id="je0-JC-z4b"/>
+                        <outlet property="twoButton" destination="6vB-rL-hY3" id="4kQ-5T-qKg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAI-NJ-jns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.89355322338831" y="877.60000000000002"/>
         </scene>
     </scenes>
 </document>

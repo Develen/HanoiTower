@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843C16A31EAE2D3800FADDE9 /* TypeOfSector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C16A21EAE2D3800FADDE9 /* TypeOfSector.swift */; };
+		843C16A71EB0878000FADDE9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C16A61EB0878000FADDE9 /* StartViewController.swift */; };
+		843C16A91EB0881800FADDE9 /* HanoiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C16A81EB0881800FADDE9 /* HanoiViewController.swift */; };
 		844415611E82BCAC00C0E8DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844415601E82BCAC00C0E8DB /* AppDelegate.swift */; };
-		844415631E82BCAC00C0E8DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844415621E82BCAC00C0E8DB /* ViewController.swift */; };
 		844415661E82BCAC00C0E8DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844415641E82BCAC00C0E8DB /* Main.storyboard */; };
 		844415681E82BCAD00C0E8DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844415671E82BCAD00C0E8DB /* Assets.xcassets */; };
 		8444156B1E82BCAD00C0E8DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844415691E82BCAD00C0E8DB /* LaunchScreen.storyboard */; };
 		844415761E82BCAD00C0E8DB /* HanoiTowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844415751E82BCAD00C0E8DB /* HanoiTowerTests.swift */; };
 		844415811E82BCAD00C0E8DB /* HanoiTowerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844415801E82BCAD00C0E8DB /* HanoiTowerUITests.swift */; };
+		8444158F1E82BD1700C0E8DB /* HanoiTower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444158E1E82BD1700C0E8DB /* HanoiTower.swift */; };
+		845F60FD1EA4F5DE008ACC7D /* Rod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F60FC1EA4F5DE008ACC7D /* Rod.swift */; };
+		F359742C1EACE9C0000540C2 /* HanoiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F359742B1EACE9C0000540C2 /* HanoiView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		843C16A21EAE2D3800FADDE9 /* TypeOfSector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeOfSector.swift; sourceTree = "<group>"; };
+		843C16A61EB0878000FADDE9 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		843C16A81EB0881800FADDE9 /* HanoiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanoiViewController.swift; sourceTree = "<group>"; };
 		8444155D1E82BCAC00C0E8DB /* HanoiTower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanoiTower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844415601E82BCAC00C0E8DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		844415621E82BCAC00C0E8DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		844415651E82BCAC00C0E8DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		844415671E82BCAD00C0E8DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8444156A1E82BCAD00C0E8DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +54,9 @@
 		8444157C1E82BCAD00C0E8DB /* HanoiTowerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanoiTowerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844415801E82BCAD00C0E8DB /* HanoiTowerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanoiTowerUITests.swift; sourceTree = "<group>"; };
 		844415821E82BCAD00C0E8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8444158E1E82BD1700C0E8DB /* HanoiTower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanoiTower.swift; sourceTree = "<group>"; };
+		845F60FC1EA4F5DE008ACC7D /* Rod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rod.swift; sourceTree = "<group>"; };
+		F359742B1EACE9C0000540C2 /* HanoiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanoiView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				844415601E82BCAC00C0E8DB /* AppDelegate.swift */,
-				844415621E82BCAC00C0E8DB /* ViewController.swift */,
+				843C16A61EB0878000FADDE9 /* StartViewController.swift */,
+				843C16A81EB0881800FADDE9 /* HanoiViewController.swift */,
+				8444158E1E82BD1700C0E8DB /* HanoiTower.swift */,
+				845F60FC1EA4F5DE008ACC7D /* Rod.swift */,
+				F359742B1EACE9C0000540C2 /* HanoiView.swift */,
+				843C16A21EAE2D3800FADDE9 /* TypeOfSector.swift */,
 				844415641E82BCAC00C0E8DB /* Main.storyboard */,
 				844415671E82BCAD00C0E8DB /* Assets.xcassets */,
 				844415691E82BCAD00C0E8DB /* LaunchScreen.storyboard */,
@@ -262,7 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844415631E82BCAC00C0E8DB /* ViewController.swift in Sources */,
+				843C16A91EB0881800FADDE9 /* HanoiViewController.swift in Sources */,
+				845F60FD1EA4F5DE008ACC7D /* Rod.swift in Sources */,
+				8444158F1E82BD1700C0E8DB /* HanoiTower.swift in Sources */,
+				843C16A31EAE2D3800FADDE9 /* TypeOfSector.swift in Sources */,
+				843C16A71EB0878000FADDE9 /* StartViewController.swift in Sources */,
+				F359742C1EACE9C0000540C2 /* HanoiView.swift in Sources */,
 				844415611E82BCAC00C0E8DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +532,7 @@
 				844415871E82BCAD00C0E8DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		844415881E82BCAD00C0E8DB /* Build configuration list for PBXNativeTarget "HanoiTowerTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +541,7 @@
 				8444158A1E82BCAD00C0E8DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8444158B1E82BCAD00C0E8DB /* Build configuration list for PBXNativeTarget "HanoiTowerUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +550,7 @@
 				8444158D1E82BCAD00C0E8DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
